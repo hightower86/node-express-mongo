@@ -7,4 +7,8 @@ router.get('/', (req, resp) =>
   })
 );
 
+router.get('/create', (req, resp) => {
+  resp.render('create', { title: 'create-Page' });
+});
+
 module.exports = router;
