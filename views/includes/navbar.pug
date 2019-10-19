@@ -2,7 +2,7 @@ nav(class="blue darken-4")
   .nav-wrapper
     a.brand-logo(href='/') Todos
     ul#nav-mobile.right.hide-on-med-and-down
-      li
+      li(class=`${isIndex? 'active':''}`)
         a(href='/') Todos
-      li
+      li(class=`${isCreate? 'active':''}`)
         a(href='/create') Create
