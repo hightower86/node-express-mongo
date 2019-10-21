@@ -6,8 +6,8 @@ block content
       li.todo
         form(action='/complete' method='POST')
           label
-            input(type='checkbox')
-            span= todo.title
+            input(type='checkbox' name='completed' checked= todo.completed)
+            span(class=`${todo.completed? 'completed':''}`)= todo.title
             input(type='hidden' value= todo.id name='id')
             button(class='btn btn-small' type='submit') Save
     else
