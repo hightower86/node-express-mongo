@@ -26,8 +26,9 @@ router.post('/create', async (req, res) => {
   await todo.save();
   res.redirect('/');
 });
-// router.post('/create', function(req, res, next) {
-//   console.log('&&&&&&&&&&', req.body);
-//   res.json(req.body);
-// });
+router.post('/complete', function(req, res, next) {
+  console.log('--&&--&&--&&', req.body);
+  res.json(req.body);
+});
+
 module.exports = router;
